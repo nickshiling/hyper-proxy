@@ -15,10 +15,10 @@ edition = "2018"
 
 [dependencies]
 tokio = { version = "1", features = ["io-std", "io-util"] }
-hyper = { version = "0.14", features = ["client"] }
+hyper = { git = "https://github.com/nickshiling/hyper.git", branch = "status-reason-parsing-support-v01416", features = ["client"] }
 
 tower-service = "0.3"
-http = "0.2"
+http = { git = "https://github.com/nickshiling/http.git", branch = "status-reason-parsing-support" }
 futures-util = { version = "0.3", default-features = false }
 bytes = "1.0"
 hyper-tls = { version = "0.5.0", optional = true }
@@ -32,11 +32,11 @@ hyper-rustls = { version = "0.22", optional = true }
 webpki = { version = "0.21", optional = true }
 rustls-native-certs = { version = "0.5.0", optional = true }
 webpki-roots = { version = "0.21.0", optional = true }
-headers = "0.3"
+headers = { git = "https://github.com/nickshiling/headers.git", branch = "status-reason-parsing-support" }
 
 [dev-dependencies]
 tokio = { version = "1.0", features = ["full"] }
-hyper = { version = "0.14", features = ["client", "http1", "tcp"] }
+hyper = { git = "https://github.com/nickshiling/hyper.git", branch = "status-reason-parsing-support-v01416", features = ["client", "http1", "tcp"] }
 
 [features]
 openssl-tls = ["openssl", "tokio-openssl"]
